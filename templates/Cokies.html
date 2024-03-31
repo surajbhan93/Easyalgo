@@ -1,0 +1,124 @@
+
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Website - Cookie Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <h1 style="text-align: center; margin-top: 60px;padding-top: 60px;">Cookie settings</h1>
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8" >
+
+        <!-- Hero Section -->
+      
+        <section class="bg-gray-800 text-white py-16">
+            <div class="container text-center">
+                <h1 class="text-4xl font-semibold mb-4">Welcome to Tech Website</h1>
+                <p class="text-lg mb-8">Your one-stop destination for all things tech!</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Cookie Settings -->
+        <section class="mt-12">
+            <div class="bg-white shadow-md rounded-md p-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Cookie Settings</h2>
+                <p class="text-lg text-gray-700 mb-6">Please review and adjust your cookie preferences below:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Necessary Cookies -->
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" checked>
+                            <span class="ml-2 text-gray-700">Necessary Cookies</span>
+                        </label>
+                        <p class="text-sm text-gray-500">These cookies are essential for the website to function properly.</p>
+                    </div>
+                    <!-- Analytics Cookies -->
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span class="ml-2 text-gray-700">Analytics Cookies</span>
+                        </label>
+                        <p class="text-sm text-gray-500">These cookies help us understand how visitors interact with the website.</p>
+                    </div>
+                    <!-- Marketing Cookies -->
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span class="ml-2 text-gray-700">Marketing Cookies</span>
+                        </label>
+                        <p class="text-sm text-gray-500">These cookies may be set through our site by advertising partners.</p>
+                    </div>
+                    <!-- Preferences Cookies -->
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span class="ml-2 text-gray-700">Preferences Cookies</span>
+                        </label>
+                        <p class="text-sm text-gray-500">These cookies enable the website to provide enhanced functionality.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded">Save Preferences</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="mt-12">
+            <div class="bg-white shadow-md rounded-md p-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h2>
+                <p class="text-lg text-gray-700 mb-6">You can reach out to us using the following contact methods:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Email -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                        <p class="text-gray-700"><a href="mailto:ntamerrwael@mfano.ga">easyalgo@gmail.com</a></p>
+                    </div>
+                    <!-- Phone Number -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Phone Number</h3>
+                        <p class="text-gray-700"> <a href="tel:+91 999999999">+91 XXX-XXX-XXXX </a></p>
+                    </div>
+                    <!-- Live Chat -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Live Chat</h3>
+                        <p class="text-gray-700">Chat with us live on our website.</p>
+                    </div>
+                    <!-- Social Media -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Social Media</h3>
+                        <p class="text-gray-700">Connect with us on social media platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Tech Website. All rights reserved.</p>
+        </div>
+    </footer> -->
+
+</body>
+
+</html>
+
+{% endblock %}

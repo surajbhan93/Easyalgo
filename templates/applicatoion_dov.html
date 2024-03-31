@@ -1,0 +1,116 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career in Application Development</title>
+    <style>
+        /* Same styling as the previous examples */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-top: 45px; margin-top: 45px;"></div>
+    <header>
+        <h1>Career in Application Development</h1>
+    </header>
+
+    <section id="why-choose">
+        <h2>Why Choose a Career in Application Development?</h2>
+        <p>Application development offers diverse opportunities for growth and innovation. Here are some reasons to consider a career in application development:</p>
+        <ul>
+            <li>High demand for skilled developers in various industries</li>
+            <li>Opportunities to work on cutting-edge technologies and platforms</li>
+            <li>Continuous learning and skill development</li>
+            <li>Potential for freelance or remote work</li>
+            <li>Competitive salaries and benefits</li>
+        </ul>
+    </section>
+
+    <section id="skills-required">
+        <h2>Skills Required for Application Development</h2>
+        <p>To succeed in application development, you'll need a combination of technical skills and soft skills:</p>
+        <ul>
+            <li>Proficiency in programming languages such as Java, Swift, Kotlin, or others</li>
+            <li>Understanding of mobile or web development frameworks like React Native, Flutter, or Angular</li>
+            <li>Experience with database management systems like SQLite, MySQL, or MongoDB</li>
+            <li>Knowledge of version control systems like Git</li>
+            <li>Problem-solving and critical thinking skills</li>
+            <li>Attention to detail and ability to work in a team</li>
+        </ul>
+    </section>
+
+    <section id="how-to-start">
+        <h2>How to Start a Career in Application Development?</h2>
+        <p>If you're interested in pursuing a career in application development, here are some steps you can take:</p>
+        <ol>
+            <li>Learn programming languages and development frameworks through online courses, tutorials, or coding bootcamps</li>
+            <li>Build projects to showcase your skills and create a portfolio</li>
+            <li>Participate in hackathons, coding competitions, or open-source projects to gain practical experience</li>
+            <li>Network with professionals in the field and attend industry events or meetups</li>
+            <li>Seek internships or entry-level positions to gain real-world experience and mentorship</li>
+            <li>Stay updated with the latest trends and advancements in application development</li>
+        </ol>
+    </section>
+
+    
+
+    <!-- JavaScript to toggle section visibility -->
+    <script>
+        // Function to toggle section visibility
+        function toggleSectionVisibility(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+
+        // Initially show all sections
+        var sections = ["why-choose", "skills-required", "how-to-start"];
+        sections.forEach(function(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.style.display = "block";
+            section.addEventListener("click", function() {
+                var otherSections = sections.filter(function(id) {
+                    return id !== sectionId;
+                });
+                otherSections.forEach(function(id) {
+                    toggleSectionVisibility(id);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+{% endblock %}

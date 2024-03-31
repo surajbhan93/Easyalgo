@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}404{% endblock title %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech Website</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Course and Certificate Section -->
+<section class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-8" style="padding-top: 60px; margin-top: 60px;">Explore Our Courses and Certificates</h2>
+
+        <!-- Course Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course Card 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6 course-card">
+                <h3 class="text-xl font-semibold mb-2">Introduction to Web Development</h3>
+                <p class="text-gray-600 mb-4">Learn the basics of HTML, CSS, and JavaScript.</p>
+                <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 course-card">
+                <h3 class="text-xl font-semibold mb-2">Python Programming Masterclass</h3>
+                <p class="text-gray-600 mb-4">Become proficient in Python programming language.</p>
+                <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 course-card">
+                <h3 class="text-xl font-semibold mb-2">Data Science Fundamentals</h3>
+                <p class="text-gray-600 mb-4">Explore the world of data science and analytics.</p>
+                <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Certificate Section -->
+        <div class="mt-12 text-center">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Earn a Certificate</h3>
+            <p class="text-gray-600">Complete a course and receive a certificate of completion.</p>
+            <a href="/dsa" class="mt-4 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">View Certificates</a>
+        </div>
+    </div>
+</section>
+
+<!-- Include custom JavaScript -->
+<script src="#s">
+    // Custom JavaScript for course cards hover effect
+const courseCards = document.querySelectorAll('.course-card');
+
+courseCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.classList.add('transform', 'scale-105');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.classList.remove('transform', 'scale-105');
+    });
+});
+
+</script>
+</body>
+</html>
+
+{% endblock %}

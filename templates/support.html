@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load tailwind_tags %}
+{% tailwind_css %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Support FAQs</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body  class=" bg-gray-100">
+<h1 style="text-align: center; padding-top: 70px; margin-top: 70px;">support Section</h1>
+    <div class="container mx-auto px-4 py-8">
+
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6">Tech Support FAQs</h1>
+
+        <!-- FAQ Section -->
+        <div class="accordion">
+
+            <!-- FAQ 1 -->
+            <div class="accordion-item border-b">
+                <input type="checkbox" id="faq1" class="accordion-toggle hidden">
+                <label for="faq1" class="accordion-title block cursor-pointer font-semibold text-blue-600 hover:text-blue-800">
+                    What is [Product/Service Name]?
+                </label>
+                <div class="accordion-content">
+                    <p class="text-gray-700 mt-2">[Product/Service Name] is a [brief description of what the product/service does]. It is designed to [explain its purpose or function].</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item border-b">
+                <input type="checkbox" id="faq2" class="accordion-toggle hidden">
+                <label for="faq2" class="accordion-title block cursor-pointer font-semibold text-blue-600 hover:text-blue-800">
+                    How do I get started with [Product/Service Name]?
+                </label>
+                <div class="accordion-content">
+                    <p class="text-gray-700 mt-2">To get started with [Product/Service Name], simply [provide step-by-step instructions on how to create an account, install the software, or access the service].</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item border-b">
+                <input type="checkbox" id="faq3" class="accordion-toggle hidden">
+                <label for="faq3" class="accordion-title block cursor-pointer font-semibold text-blue-600 hover:text-blue-800">
+                    I forgot my password. How do I reset it?
+                </label>
+                <div class="accordion-content">
+                    <p class="text-gray-700 mt-2">If you forgot your password, you can reset it follow these instruction: </p>
+                    <ul class="list-disc ml-6 mt-2">
+                        <li>Go to the login page.</li>
+                        <li>Click on the "Forgot Password" button.</li>
+                        <li>Follow the instructions to create a new password.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item border-b">
+                <input type="checkbox" id="faq4" class="accordion-toggle hidden">
+                <label for="faq4" class="accordion-title block cursor-pointer font-semibold text-blue-600 hover:text-blue-800">
+                    How do I contact customer support?
+                </label>
+                <div class="accordion-content">
+                    <p class="text-gray-700 mt-2">If you need assistance or have any questions, you can contact our customer support team by email, phone, or live chat.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item border-b">
+                <input type="checkbox" id="faq5" class="accordion-toggle hidden">
+                <label for="faq5" class="accordion-title block cursor-pointer font-semibold text-blue-600 hover:text-blue-800">
+                    How do I report a bug or provide feedback?
+                </label>
+                <div class="accordion-content">
+                    <p class="text-gray-700 mt-2">If you encounter a bug or have feedback to share, you can report it by filling out a form or sending an email to our support team.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item border-b">
+                <input type="checkbox" id="faq6" class="accordion-toggle hidden">
+                <label for="faq6" class="accordion-title block cursor-pointer font-semibold text-blue-600 hover:text-blue-800">
+                    Is there a free trial available for [Product/Service Name]?
+                </label>
+                <div class="accordion-content">
+                    <p class="text-gray-700 mt-2">Yes, we offer a free trial of [Product/Service Name] for 14 days. You can sign up for the free trial on our website.</p>
+                </div>
+            </div>
+
+            <!-- Add more FAQs here -->
+
+        </div>
+        <!-- End FAQ Section -->
+
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6">Contact Information</h1>
+
+        <!-- Contact Methods -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Email -->
+            <div class="bg-white shadow-md rounded-md p-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">Email</h2>
+                <p class="text-gray-700">You can reach us via email at <a href="mailto:surya93362@gmail.com" class="text-blue-500 hover:underline">surya93362@gmail.com</a>.</p>
+            </div>
+            <!-- linkedin -->
+            <div class="bg-white shadow-md rounded-md p-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">Linkedin</h2>
+                <p class="text-gray-700">You can reach us via Linkedin at <a href="https://www.linkedin.com/in/surajbhan93/" class="text-blue-500 hover:underline">Linkedin</a>.</p>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="bg-white shadow-md rounded-md p-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">Phone Number</h2>
+                <p class="text-gray-700">For immediate assistance, please call us at <a href="tel:+1234567890" class="text-blue-500 hover:underline">+1 (234) 567-890</a>.</p>
+            </div>
+
+            <!-- Live Chat -->
+            <div class="bg-white shadow-md rounded-md p-6">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">Live Chat</h2>
+                <p class="text-gray-700">Chat with one of our support agents in real-time by clicking the chat icon in the bottom right corner of the page.</p>
+            </div>
+
+            <!-- Add more contact methods here -->
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+{% endblock %}

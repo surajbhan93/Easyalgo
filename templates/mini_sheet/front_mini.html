@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<br><br><br>
+{% block title %}<h1 class="text-center text-3xl mt-8 bg-gray-50">EasyAlgo SDE Sheet – Top Coding Interview Problems</h1>{% endblock title %}
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<div class="container mx-auto p-8">
+    <div class="border-gray-300 rounded-lg overflow-hidden px-6 py-4 mx-auto max-w-xl hover:border border hover:border-black">
+        <h2 class="text-center text-lg font-semibold" style=""><b>Note:</b></h2>
+        <p class="text-center text-base shadow-lg">The Series doesn’t focus on any specific programming language. The DSA preparation sheet now includes an "End Time Revised" section in its description. This addition allows users to jot down important remarks or reflections related to their study sessions. These notes serve as valuable insights for tracking progress and refining study strategies.</p>
+      </div>
+        <!-- Container -->
+        <br>
+    <!-- <div class="mb-8">
+        <img class="mx-auto rounded-lg shadow-md" src="{% static 'images/html.png' %}" alt="Service Icon"
+            style="width: 1100px; height: auto;">
+    </div> -->
+
+    <!-- Content Box -->
+    <div class="border-gray-300 rounded-lg overflow-hidden px-6 py-4 mx-auto max-w-5xl hover:border border hover:border-black">
+    <div class="container mx-auto px-4 lg:px-0 mt-8">
+        <details class="mt-2" closed="">
+            <summary class="rounded-full flex justify-between items-center">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.95 8.293a1 1 0 0 0-1.414 1.414L11.586 11l-1.293 1.293a1 1 0 1 0 1.414 1.414l1.95-1.95a1 1 0 0 0 0-1.414l-1.95-1.95a1 1 0 0 0 0-1.414zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" clip-rule="evenodd"/>
+                    </svg>
+                    <b>Array Problems</b>
+                    <span class="mx-2">:</span>
+                </div>
+                <div class="flex flex-col items-center lg:flex-row lg:items-center">
+                    <div class="bg-blue-200 rounded px-3 py-1 flex items-center justify-between mb-2 lg:mb-0 lg:mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.95 8.293a1 1 0 0 0-1.414 1.414L11.586 11l-1.293 1.293a1 1 0 1 0 1.414 1.414l1.95-1.95a1 1 0 0 0 0-1.414l-1.95-1.95a1 1 0 0 0 0-1.414zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <span class="text solved" id="solvedCount">0</span>/<span class="total">20</span>
+                        </div>
+                    </div>
+                </div>
+            </summary>
+            
+            <!-- Problems Table -->
+            <div class="overflow-x-auto">
+                <table class="mt-2 w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr>
+                            <th class="border border-gray-300 px-2 py-1">Action</th>
+                            <th class="border border-gray-300 px-2 py-1">Problems [Article, Codes]</th>
+                            <th class="border border-gray-300 px-2 py-1">Question Link GFG</th>
+                            <th class="border border-gray-300 px-2 py-1">Question Link Leetcode</th>
+                            <th class="border border-gray-300 px-2 py-1">Notes</th>
+                            <th class="border border-gray-300 px-2 py-1">YouTube Link</th>
+                            <th class="border border-gray-300 px-2 py-1">Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for post in posts %}
+                        <tr class="border border-gray-300">
+                            <td class="border px-4 py-2">
+                                <select name="" class="prev-value" onchange="updateCellColor(this)">
+                                    <option value="0">Pending</option>
+                                    <option value="1">Done</option>
+                                    <option value="2">Revisit</option>
+                                </select>
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap border-r border-gray-100" style="color: aqua;">{{ post.title }}</td>
+
+                            <td class="px-4 py-2 whitespace-nowrap border-r border-gray-200">
+                                {% if post.gfg_link %}
+
+                                <a href="{{ post.gfg_link }}" class="text-blue-500" target="_blank">
+                                    <img  src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" alt="" width="40" height="40" decoding="async" loading="lazy" data-lazy-type="image_list">
+                                    <!-- GeekforGeeks -->
+                                </a>
+                                {% endif %}
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap border-r border-gray-200">
+                                {% if post.leetcode_link %}
+                                <a href="{{ post.leetcode_link }}" class="text-blue-500 rounded-full h-8 w-8 flex" target="_blank">
+                                    <img src="{% static 'images/leetcode.jpg' %}" alt="LeetCode Icon" class="w-8 h-8 mr-2 rounded-full" width="24" height="24" decoding="async" loading="lazy" data-lazy-type="image_list">
+                                    <!-- LeetCode -->
+                                </a>
+                                {% endif %}
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap border-r border-gray-200">
+                                <a href="{{ post.notes_pdf_link }}" class="text-blue-500" target="_blank">
+                                    <img src="https://takeuforward.org/wp-content/uploads/2023/05/empty-note.png" alt="Notes Icon" class="w-8 h-8 mr-2">
+                                    <!-- Notes -->
+                                </a>
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap border-r border-gray-200">
+                                <a href="{{ post.youtube_link }}" class="text-blue-500" target="_blank">
+                                    <img src="{% static 'images/youtube.png' %}" alt="YouTube Icon" class="w-8 h-8 mr-2 rounded-full">
+                                    <!-- YouTube Link -->
+                                </a>
+                            </td>
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <a href="{{ post.get_absolute_url }}" class="text-blue-500">Solution</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </details>
+    </div>
+</div>
+</div>
+<br>
+
+</div id="Faqs" class="faqs">
+
+<div class="faq-heading border-gray-300 rounded-lg overflow-hidden px-6 py-4 mx-auto max-w-5xl k">
+<span><b>Frequently Asked Questions (FAQs) </b></span>
+
+<div class="faqq faq-active max-w-3xl mx-auto">
+  <div class="faq-summary faq-active flex items-center justify-between border-b border-gray-300 py-4 cursor-pointer">
+    <span class="text-lg font-semibold">Are these many questions enough for clearing any DSA round?</span>
+    <svg class="arrow-svg opacity-75 transition-transform duration-300" fill="#ee4b2b" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"></path>
+    </svg>
+  </div>
+  <div class="faq-details faq-active py-4 hidden">
+    <p class="text-base">They cover all concepts, so conceptwise you will be covered in depth as you would have solved 450+ problems. After that, it depends on your skill set, if you can tackle a new problem on the same concept, ideally you should be able to.</p>
+  </div>
+</div>
+<div class="faqq faq-active max-w-3xl mx-auto">
+  <div class="faq-summary faq-active flex items-center justify-between border-b border-gray-300 py-4 cursor-pointer">
+    <span class="text-lg font-semibold">Are these many questions enough for clearing any DSA round?</span>
+    <svg class="arrow-svg opacity-75 transition-transform duration-300" fill="#ee4b2b" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"></path>
+    </svg>
+  </div>
+  <div class="faq-details faq-active py-4 hidden">
+    <p class="text-base">They cover all concepts, so conceptwise you will be covered in depth as you would have solved 450+ problems. After that, it depends on your skill set, if you can tackle a new problem on the same concept, ideally you should be able to.</p>
+  </div>
+</div>
+
+<!-- add more faqs -->
+
+<br>
+<h1>Hurrah!! You are ready for your placement after some months of hard work! All the best, keep striving…</h1>
+<h2 class="text-red-500"><i><a href="#">-EasyAlgo</a></i></h2>
+<br>
+Share the course/sheet with your friends, created with love for Suraj Ray fam.
+<br>
+<br>
+If you find any mistakes in the sheet, it can be a wrong link as well, please fill out the <a href="https://docs.google.com/forms/d/1Q9ddk4kGexTETD1z2IrURIHLVWzhgVedstwj1EvAdcA/edit" class="text-blue-500 hover:underline">google form here</a>, our team will check it on a weekly basis, thanks.
+
+
+<!-- If any errors are detected in the document, including incorrect links, please use the provided Google Form to report them. Our team will review submissions on a weekly basis. Thank you for your cooperation in maintaining the accuracy of the <a href="https://your-google-form-link-here" class="text-blue-500 hover:underline">EasyAlgo website</a>. -->
+
+
+</div>
+
+
+
+<br>
+
+<script>
+    // JavaScript code to toggle the visibility of faq-details
+    const faqSummaries = document.querySelectorAll('.faq-summary');
+  
+    faqSummaries.forEach(summary => {
+        summary.addEventListener('click', () => {
+            const details = summary.nextElementSibling;
+            details.classList.toggle('hidden');
+            const arrow = summary.querySelector('.arrow-svg');
+            arrow.classList.toggle('rotate-180');
+    
+            // Adjust the height of the details container to enable scrolling
+            if (details.classList.contains('hidden')) {
+                details.style.maxHeight = null;
+            } else {
+                details.style.maxHeight = details.scrollHeight + 'px';
+            }
+        });
+    });
+
+    function showAlert(){
+        alert("NOT PROVIDE SOLUTION AND NOTES!");
+    }
+
+    function updateCellColor(selectElement) {
+        var row = selectElement.closest('tr');
+        var actionCell = row.querySelector('.border');
+        if (selectElement.value === '1') {
+            actionCell.classList.remove('bg-red-100');
+            actionCell.classList.add('bg-green-100');
+        } else {
+            actionCell.classList.remove('bg-green-100');
+            actionCell.classList.add('bg-red-100');
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select all select elements with class 'prev-value'
+        var selectElements = document.querySelectorAll('.prev-value');
+  
+        // Function to update progress count
+        function updateProgressCount() {
+            var solvedCount = 0;
+            selectElements.forEach(function(selectElement) {
+                if (selectElement.value === '1') {
+                    solvedCount++;
+                }
+            });
+            var solvedCountElement = document.getElementById('solvedCount');
+            solvedCountElement.textContent = solvedCount;
+        }
+  
+        // Loop through each select element
+        selectElements.forEach(function(selectElement) {
+            // Add change event listener to each select element
+            selectElement.addEventListener('change', function() {
+                // Check if the user is logged in
+                var isAuthenticated = {% if user.is_authenticated %}true{% else %}false{% endif %};
+  
+                // If user is authenticated, perform the action
+                if (isAuthenticated) {
+                    // Update progress count
+                    updateProgressCount();
+                    // Perform other actions here
+                } else {
+                    // If user is not authenticated, redirect to the login page
+                    window.location.href = "{% url 'login' %}";
+                }
+            });
+        });
+  
+        // Initial update of progress count
+        updateProgressCount();
+    });
+</script>
+{% endblock %}

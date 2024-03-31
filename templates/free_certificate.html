@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}404{% endblock title %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Certificates</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Certificate Section -->
+<section class="container mt-5" style="padding-top: 60px;margin-top: 60px;">
+    <h2 class="text-center mb-5">Free Certificates</h2>
+
+    <div class="row">
+        <!-- HTML/CSS Certificate -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">HTML/CSS Certificate</h5>
+                    <p class="card-text">Complete our HTML/CSS course to receive your certificate.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Certificate -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">JavaScript Certificate</h5>
+                    <p class="card-text">Complete our JavaScript course to receive your certificate.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Python Certificate -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Python Certificate</h5>
+                    <p class="card-text">Complete our Python course to receive your certificate.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DSA Certificate -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">DSA Certificate</h5>
+                    <p class="card-text">Complete our Data Structures and Algorithms course to receive your certificate.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STL Certificate -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">STL Certificate</h5>
+                    <p class="card-text">Complete our Standard Template Library course to receive your certificate.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Generation Form -->
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <h3 class="text-center mb-3">Generate Your Certificate</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Select Course:</label>
+                    <select class="form-control" id="course" name="course" required>
+                        <option value="html_css">HTML/CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="dsa">Data Structures and Algorithms</option>
+                        <option value="stl">Standard Template Library</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Generate Certificate</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Include custom JavaScript -->
+<script src="scripts.js"></script>
+</body>
+</html>
+
+
+{% endblock %}

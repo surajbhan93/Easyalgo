@@ -1,0 +1,139 @@
+{% extends 'base.html'%}
+{% load static %}
+
+<!-- {% block title %}404{% endblock title %} -->
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career in Information Security</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 30px;
+        }
+
+        section h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        section ul, section ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        section li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-top: 45px; margin-top: 45px;"></div>
+<header>
+    <h1 class="text-3xl font-bold">Career in Information Security</h1>
+</header>
+
+<section id="why-choose">
+    <h2>Why Choose a Career in Information Security?</h2>
+    <p>Information security is a rapidly growing field with diverse opportunities. Here are some reasons to consider a career in information security:</p>
+    <ul>
+        <li>High demand for cybersecurity professionals</li>
+        <li>Opportunities to work in various industries such as finance, healthcare, and government</li>
+        <li>Continuous learning and skill development due to evolving threats and technologies</li>
+        <li>Competitive salaries and benefits</li>
+        <li>Opportunity to make a difference by protecting sensitive information and preventing cyber attacks</li>
+    </ul>
+</section>
+
+<section id="skills-required">
+    <h2>Skills Required for Information Security</h2>
+    <p>To succeed in information security, you'll need a combination of technical skills and soft skills:</p>
+    <ul>
+        <li>Knowledge of network security concepts and protocols</li>
+        <li>Proficiency in cybersecurity tools and technologies</li>
+        <li>Understanding of risk management principles and regulatory requirements</li>
+        <li>Ability to analyze and respond to security incidents</li>
+        <li>Strong communication and collaboration skills</li>
+        <li>Attention to detail and ability to think critically</li>
+    </ul>
+</section>
+
+<section id="how-to-start">
+    <h2>How to Start a Career in Information Security?</h2>
+    <p>If you're interested in pursuing a career in information security, here are some steps you can take:</p>
+    <ol>
+        <li>Earn relevant certifications such as CISSP, CEH, or CompTIA Security+</li>
+        <li>Gain practical experience through internships or entry-level positions</li>
+        <li>Participate in cybersecurity competitions and challenges to hone your skills</li>
+        <li>Network with professionals in the field and join cybersecurity communities</li>
+        <li>Stay updated with the latest trends and developments in information security</li>
+        <li>Pursue advanced education or specialized training to further enhance your expertise</li>
+    </ol>
+</section>
+
+<!-- <footer>
+    <p>&copy; 2024 Information Security Careers</p>
+</footer> -->
+
+<script>
+    // JavaScript to toggle section visibility
+    document.addEventListener('DOMContentLoaded', function () {
+        var sections = document.querySelectorAll('section');
+        sections.forEach(function (section) {
+            section.addEventListener('click', function () {
+                sections.forEach(function (s) {
+                    if (s !== section) {
+                        s.classList.add('hidden');
+                    }
+                });
+                section.classList.remove('hidden');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+{% endblock %}

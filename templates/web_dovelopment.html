@@ -1,0 +1,117 @@
+{% extends 'base.html'%}
+{% load static %}
+
+<!-- {% block title %}404{% endblock title %} -->
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career in Web Development</title>
+    <style>
+        /* Some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hide all sections */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-top: 45px; margin-top: 45px;"></div>
+    <header>
+        <h1>Career in Web Development</h1>
+    </header>
+
+    <section id="why-choose">
+        <h2>Why Choose a Career in Web Development?</h2>
+        <p>Web development offers numerous opportunities for growth and advancement. Here are some reasons to consider a career in web development:</p>
+        <ul>
+            <li>High demand for skilled web developers</li>
+            <li>Opportunities to work on exciting projects</li>
+            <li>Continuous learning and skill development</li>
+            <li>Potential for freelance or remote work</li>
+            <li>Competitive salaries and benefits</li>
+        </ul>
+    </section>
+
+    <section id="skills-required">
+        <h2>Skills Required for Web Development</h2>
+        <p>To succeed in web development, you'll need a combination of technical skills and soft skills:</p>
+        <ul>
+            <li>Proficiency in HTML, CSS, and JavaScript</li>
+            <li>Knowledge of front-end frameworks like React or Angular</li>
+            <li>Experience with back-end technologies such as Node.js or Django</li>
+            <li>Understanding of version control systems like Git</li>
+            <li>Problem-solving and critical thinking skills</li>
+            <li>Attention to detail and ability to work in a team</li>
+        </ul>
+    </section>
+
+    <section id="how-to-start">
+        <h2>How to Start a Career in Web Development?</h2>
+        <p>If you're interested in pursuing a career in web development, here are some steps you can take:</p>
+        <ol>
+            <li>Learn the basics of HTML, CSS, and JavaScript</li>
+            <li>Take online courses or attend coding bootcamps to gain practical skills</li>
+            <li>Build projects to showcase your abilities and create a portfolio</li>
+            <li>Network with professionals in the field and seek mentorship opportunities</li>
+            <li>Apply for internships or entry-level positions to gain real-world experience</li>
+            <li>Stay updated with industry trends and continuously improve your skills</li>
+        </ol>
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2024 Web Development Careers</p>
+    </footer> -->
+
+    <script>
+        // JavaScript to toggle section visibility
+        document.addEventListener("DOMContentLoaded", function() {
+            var sections = document.querySelectorAll("section");
+
+            sections.forEach(function(section) {
+                section.style.display = "block"; // Display all sections initially
+            });
+
+            // Function to toggle section visibility
+            function toggleSectionVisibility(event) {
+                var sectionId = event.target.getAttribute("href").substring(1); // Extract section id from href
+                var section = document.getElementById(sectionId);
+
+                if (section.style.display === "block") {
+                    section.style.display = "none";
+                } else {
+                    section.style.display = "block";
+                }
+            }
+
+            // Attach click event listener to all header elements
+            var headers = document.querySelectorAll("header h1");
+
+            headers.forEach(function(header) {
+                header.addEventListener("click", toggleSectionVisibility);
+            });
+        });
+    </script>
+</body>
+</html>
+{%endblock%}

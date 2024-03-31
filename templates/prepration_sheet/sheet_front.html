@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .arrow {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .arrow:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+{% block title %}<h1 class="text-center text-3xl mt-8 bg-gray-700"> <b style="color: cornflowerblue;box-decoration-break: slice;">EasyAlgo</b> Short Revised -s Top  Interview Problems</h1>{% endblock title %}
+<body class="bg-gray-700" style="margin-top: 50px; padding-top: 50px;">
+    <div class="container mx-auto p-8">
+
+        <div class="border-gray-300 rounded-lg overflow-hidden px-6 py-4 mx-auto max-w-xl hover:border border hover:border-black" style="background-color: rgb(42, 42, 116);;">
+            <h2 class="text-center text-lg font-semibold"><b>Note:</b></h2>
+             <p  class="text-center text-base shadow-lg hover:bg-gradient-to-r from-purple-500 to-pink-500">
+                    That Playlist End time revised all notes.For networking, focus on OSI and TCP/IP models, subnetting, routing protocols like OSPF and BGP, and network security concepts like firewalls and VPNs. Commonly asked by Cisco, Juniper, and Amazon. <br>
+
+                    In DBMS, review SQL fundamentals, normalization, indexing, and transactions. Companies like Oracle, Microsoft, and Google frequently inquire about these topics.
+                    <br>
+                    For computer science, cover data structures, algorithms, operating systems, and object-oriented programming. Google, Facebook, and Amazon often inquire about these areas. 
+                   
+
+
+                </p> 
+          </div>
+
+        <!-- Content Box -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8" style="padding-top: 15px; margin-top: 15px;">
+             <h2 class="text-xl font-bold mb-4">Learn DBMS from Beginner to Advanced</h2>
+            <!-- <p class="text-gray-700 mb-4">Just click on the link given below and read post by post and try to code HTML on your own. Don't spend too much time, aim to learn about 60 to 80 percent of the tags. After learning how to implement them, you can proceed further. Thanks!</p> -->
+            <a href="#" class="text-blue-500 hover:underline">Start Learning</a>
+        </div>
+ <!-- Decorated Image -->
+ 
+        <!-- Table -->
+        <table class="w-full border-collapse border border-gray-300 bg-white shadow-lg rounded-lg">
+            <thead>
+                <tr>
+                    <th class="p-3 text-left border-r">Title</th>
+                    <!-- <th class="p-3 text-left border-r">Date Added</th> -->
+                    <th class="p-3 text-left border-r">Introduction</th>
+                    <th class="p-3 text-left">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr class="border-t border-b border-gray-300">
+                    <td class="p-3 border-r">{{ post.title }}</td>
+                    <!-- <td class="p-3 border-r">{{ post.date_added }}</td> -->
+                    <td class="p-3 border-r">{{ post.intro }}</td>
+                    <td class="p-3"><a href="{% url 'detail_sheet' post.slug %}" class="text-blue-500">Read more</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FAQS -->
+    <main class="p-6 flex justify-center">
+        <section id="faqs" class="space-y-4 w-5/6">
+            <h2 class="text-2xl font-bold text-center">Frequently Asked Questions</h2>
+            
+            <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center">
+                    <span><b><i>What is enough source  for interview round?</i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3>
+                <p class="hidden" style="padding-top: 5px;">Yes, That is enough for intervie round.</p>
+            </div>
+            <!-- <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center"> -->
+                    <!-- <span><b><i>Why should I use the STL? </i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3>
+                <p class="hidden" style="padding-top: 5px;">The STL provides a set of common classes for C++, such as containers and associative arrays, that can be used with any built-in type and with any user-defined type that supports some elementary operations (such as copying and assignment).</p>
+            </div>
+
+            <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center">
+                    <span><b><i>Where is STL used?</i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3> -->
+                <!-- <p class="hidden" style="padding-top: 5px;">
+                    It is a container used in the C++ programming language. It can hold objects of the same type inside it. They can help implement different data structures, such as arrays, linked lists, maps, sets, etc. Using STL in C++ saves much time and makes developer's work easy and productive.</p>
+            </div>
+            <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center">
+                    <span><b><i>Are there any alternatives to the STL in C++?</i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3>
+                <p class="hidden" style="padding-top: 5px;">While the STL is the standard library for C++, there are alternative libraries and frameworks available for specific purposes, such as Boost for additional functionality and Qt for GUI development. However, the STL remains the most widely used and standardized library for general-purpose programming in C++. </p>
+            </div>
+           -->
+            
+            <!-- Add more FAQ items as needed -->
+        </section>
+        
+    </main>
+    <br>
+    <div class="container mx-auto mt-8">
+        <h1 class="text-4xl text-center font-bold">learn this and practice…</h1>
+        <h2 class="text-red-500 text-center mt-4"><i><a href="#">-EasyAlgo</a></i></h2>
+        <br>
+        <p class="text-center">Share the course with your friends, created with love for Suraj Ray fam.</p>
+        <br>
+        <br>
+        <p class="text-center">If you find any mistakes in the course, it can be a wrong link as well, please fill out
+            the <a href="https://docs.google.com/forms/d/1Q9ddk4kGexTETD1z2IrURIHLVWzhgVedstwj1EvAdcA/edit"
+                class="text-blue-500 hover:underline">google form here</a>, our team will check it on a weekly basis,
+            thanks.</p>
+    </div>
+    
+    <!-- If any errors are detected in the document, including incorrect links, please use the provided Google Form to report them. Our team will review submissions on a weekly basis. Thank you for your cooperation in maintaining the accuracy of the <a href="https://your-google-form-link-here" class="text-blue-500 hover:underline">EasyAlgo website</a>. -->
+    
+    
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+    
+        faqItems.forEach(item => {
+            const arrow = item.querySelector('.arrow');
+            const answer = item.querySelector('p');
+    
+            arrow.addEventListener('click', () => {
+                answer.classList.toggle('hidden');
+                arrow.textContent = answer.classList.contains('hidden') ? 'Expand' : 'Hidden';
+            });
+        });
+    </script>  
+</body>
+
+</html>
+{% endblock %}

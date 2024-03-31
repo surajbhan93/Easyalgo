@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .arrow {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .arrow:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-700" style="margin-top: 50px; padding-top: 50px;">
+    <div class="container mx-auto p-8">
+
+        <div class="mb-8">
+            <img class="mx-auto rounded-lg shadow-md" src="{% static 'images/html.png' %}" alt="Service Icon" style="width: 1100px; height: auto;">
+        </div>
+
+        <!-- Content Box -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-xl font-bold mb-4">Learn HTML from Beginner to Advanced</h2>
+            <p class="text-gray-700 mb-4">Just click on the link given below and read post by post and try to code HTML on your own. Don't spend too much time, aim to learn about 60 to 80 percent of the tags. After learning how to implement them, you can proceed further. Thanks!</p>
+            <a href="#" class="text-blue-500 hover:underline">Start Learning</a>
+        </div>
+ <!-- Decorated Image -->
+ 
+        <!-- Table -->
+        <table class="w-full border-collapse border border-gray-300 bg-white shadow-lg rounded-lg">
+            <thead>
+                <tr>
+                    <th class="p-3 text-left border-r">Title</th>
+                    <!-- <th class="p-3 text-left border-r">Date Added</th> -->
+                    <th class="p-3 text-left border-r">Introduction</th>
+                    <th class="p-3 text-left">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr class="border-t border-b border-gray-300">
+                    <td class="p-3 border-r">{{ post.title }}</td>
+                    <!-- <td class="p-3 border-r">{{ post.date_added }}</td> -->
+                    <td class="p-3 border-r">{{ post.intro }}</td>
+                    <td class="p-3"><a href="{% url 'html_detail' post.slug %}" class="text-blue-500">Read more</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FAQS -->
+    <main class="p-6 flex justify-center">
+        <section id="faqs" class="space-y-4 w-5/6">
+            <h2 class="text-2xl font-bold text-center">Frequently Asked Questions</h2>
+            
+            <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center">
+                    <span><b><i>How many days do you learn HTML? </i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3>
+                <p class="hidden" style="padding-top: 5px;">Learning HTML typically takes around 10 to 15 days for basic proficiency.</p>
+            </div>
+            <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center">
+                    <span><b><i>What is HTML? </i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3>
+                <p class="hidden" style="padding-top: 5px;">HTML is a hypertext markup language. That is the basic scripting used by web browsers to render pages on the World Wide Web.It's a markup language.</p>
+            </div>
+
+            <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center">
+                    <span><b><i>What ia the role of CSS in HTML? </i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3>
+                <p class="hidden" style="padding-top: 5px;">CSS is a style sheet used to describe the presentation of a document written in HTML or XML.There are both scripting languages used to create a web page and web applications.</p>
+            </div>
+            <div class="faq-item bg-white border border-gray-300 shadow-lg rounded-lg p-4">
+                <h3 class="flex justify-between items-center">
+                    <span><b><i>Can HTML handle multimedia content ? </i> </b></span>
+                    <span class="arrow inline-block">&#9660;</span>
+                </h3>
+                <p class="hidden" style="padding-top: 5px;">YEs,HTML can handle multimedia content.With HTML5, multimedia elements such as 'audio' and `video`tags are supported </p>
+            </div>
+          
+            
+            <!-- Add more FAQ items as needed -->
+        </section>
+        
+    </main>
+    <br>
+    <div class="container mx-auto mt-8">
+        <h1 class="text-4xl text-center font-bold">learn this and make a mini- and large-scale project using HTML for practice…</h1>
+        <h2 class="text-red-500 text-center mt-4"><i><a href="#">-EasyAlgo</a></i></h2>
+        <br>
+        <p class="text-center">Share the course with your friends, created with love for Suraj Ray fam.</p>
+        <br>
+        <br>
+        <p class="text-center">If you find any mistakes in the course, it can be a wrong link as well, please fill out
+            the <a href="https://docs.google.com/forms/d/1Q9ddk4kGexTETD1z2IrURIHLVWzhgVedstwj1EvAdcA/edit"
+                class="text-blue-500 hover:underline">google form here</a>, our team will check it on a weekly basis,
+            thanks.</p>
+    </div>
+    
+    <!-- If any errors are detected in the document, including incorrect links, please use the provided Google Form to report them. Our team will review submissions on a weekly basis. Thank you for your cooperation in maintaining the accuracy of the <a href="https://your-google-form-link-here" class="text-blue-500 hover:underline">EasyAlgo website</a>. -->
+    
+    
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+    
+        faqItems.forEach(item => {
+            const arrow = item.querySelector('.arrow');
+            const answer = item.querySelector('p');
+    
+            arrow.addEventListener('click', () => {
+                answer.classList.toggle('hidden');
+                arrow.textContent = answer.classList.contains('hidden') ? 'Expand' : 'Hidden';
+            });
+        });
+    </script>  
+</body>
+
+</html>
+{% endblock %}

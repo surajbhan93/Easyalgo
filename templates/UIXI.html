@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+<br><br>
+{% block title %}Blog{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech Career Section</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .career-section {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .career-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .career-description {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .career-steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .career-step {
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-top: 45px; margin-top: 45px;"></div>
+<header>
+    <h1  >Explore Careers in EdTech</h1>
+    <p>Unlock Opportunities in Education Technology</p>
+</header>
+
+<section class="career-section">
+    <h2>How to Start a Career in EdTech?</h2>
+    <div class="career-description">
+        <p>If you're passionate about education and technology, a career in EdTech might be right for you. Here are some steps to get started:</p>
+    </div>
+    <div class="career-steps">
+        <div class="career-step">
+            <h3>Educational Background</h3>
+            <p>Obtain a degree in education, computer science, instructional design, or related fields.</p>
+        </div>
+        <div class="career-step">
+            <h3>Gain Skills</h3>
+            <p>Learn about educational technology tools, instructional design principles, and project management.</p>
+        </div>
+        <div class="career-step">
+            <h3>Build Experience</h3>
+            <p>Gain experience through internships, freelance projects, or volunteering in educational settings.</p>
+        </div>
+        <div class="career-step">
+            <h3>Networking</h3>
+            <p>Connect with professionals in the EdTech industry through events, conferences, and online communities.</p>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>
+
+{%endblock%}

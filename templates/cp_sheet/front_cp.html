@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100" style="margin-top: 50px; padding-top: 50px;">
+    <div class="container mx-auto p-8">
+
+        <div class="mb-8">
+            <img class="mx-auto rounded-lg shadow-md" src="{% static 'images/html.png' %}" alt="Service Icon" style="width: 1100px; height: auto;">
+        </div>
+
+        <!-- Content Box -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-xl font-bold mb-4">Learn HTML from Beginner to Advanced</h2>
+            <p class="text-gray-700 mb-4">Just click on the link given below and read post by post and try to code HTML on your own. Don't spend too much time, aim to learn about 60 to 80 percent of the tags. After learning how to implement them, you can proceed further. Thanks!</p>
+            <a href="#" class="text-blue-500 hover:underline">Start Learning</a>
+        </div>
+ <!-- Decorated Image -->
+ 
+        <!-- Table -->
+        <table class="w-full border-collapse border border-gray-300 bg-white shadow-lg rounded-lg">
+            <thead>
+                <tr>
+                    <th class="p-3 text-left border-r">Title</th>
+                    <th class="p-3 text-left border-r">Date Added</th>
+                    <th class="p-3 text-left border-r">Introduction</th>
+                    <th class="p-3 text-left">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr class="border-t border-b border-gray-300">
+                    <td class="p-3 border-r">{{ post.title }}</td>
+                    <td class="p-3 border-r">{{ post.date_added }}</td>
+                    <td class="p-3 border-r">{{ post.intro }}</td>
+                    <td class="p-3"><a href="{% url 'cp_detail' post.slug %}" class="text-blue-500">Read more</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+{% endblock %}
