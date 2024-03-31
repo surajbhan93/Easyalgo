@@ -220,21 +220,7 @@ AUTHENTICATION_BACKENDS = [
 
 import os  # Add this line at the top
 
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE' : [
-            'profile',
-            'email'
-        ],
-        'APP': {
-            'client_id': '#',
-            'secret': '#',  # Use the provided client secret
-        },
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        }
-    }
-}
+
 
 PASSWORD_RESET_SUBJECT_TEMPLATE = 'registration/password_reset_subject.txt'
 
