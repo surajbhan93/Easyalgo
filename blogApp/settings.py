@@ -227,8 +227,8 @@ SOCIALACCOUNT_PROVIDERS = {
             'email'
         ],
         'APP': {
-            'client_id': '273332233115-9ni6is2862bsjq32g6697oaolkbonsfv.apps.googleusercontent.com',
-            'secret': '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',  # Use the provided client secret
+            'client_id': '#',
+            'secret': '#',  # Use the provided client secret
         },
         'AUTH_PARAMS': {
             'access_type': 'online',
