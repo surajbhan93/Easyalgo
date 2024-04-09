@@ -9,10 +9,13 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-## Introduction
-**"Django Tailwind Blog"** is a developer blog and portfolio website built using **Django** and **Tailwind CSS**. It includes several pages such as Home, About, Contact, Blog, Projects, Categories, and custom 404 pages. The project features a clean and modern design that is fully responsive and optimized for performance. It includes a powerful admin interface for managing the content, and is easy to customize and deploy to a production environment.
 
-![EasyAlgo](https://user-images.githubusercontent.com/106135144/227858936-d4cbcb44-9ff4-4729-b0f0-6ede931b99e0.png)
+![Screenshot 2024-04-08 173253](https://github.com/surajbhan93/easyalgo/assets/114743961/583bb5de-8f10-42c1-89f3-b50b29d3edc7)
+
+## Introduction
+**"Dynamic EasyAlgo"** is a developer blog and portfolio website built using **Django** and **Tailwind CSS**. It includes several pages such as Home, About, Contact, Blog, Projects, Categories, and custom 404 pages. The project features a clean and modern design that is fully responsive and optimized for performance. It includes a powerful admin interface for managing the content, and is easy to customize and deploy to a production environment.
+
+![EasyAlgo](https://github.com/surajbhan93/easyalgo/assets/114743961/5fef49f6-fded-4f90-8548-7ad03bd14dc7)
 
 ## Table of Content
   * [Introduction](#introduction)
@@ -98,15 +101,27 @@ python manage.py runserver
 - `Custom 404 Pages`: Custom error pages that display when a user navigates to a non-existent page or encounters an error.
 
 ## Website Screenshots
-![127 0 0 1_8000_about](https://user-images.githubusercontent.com/106135144/218676693-b433a723-0569-4a5a-91e2-d2330659233d.png)
 
-![127 0 0 1_8000_contact](https://user-images.githubusercontent.com/106135144/218676709-3924f790-32db-46f3-a1b5-bf1907506751.png)
+![Screenshot 2024-04-09 071839](https://github.com/surajbhan93/easyalgo/assets/114743961/a4a6b889-3b6d-490d-b763-27c0ea43e14e)
 
-![127 0 0 1_8000_blog](https://user-images.githubusercontent.com/106135144/218676733-bc2313e9-9721-4f4b-9fd8-ab7cfa939221.png)
 
-![127 0 0 1_8000_projects](https://user-images.githubusercontent.com/106135144/218676756-3770e70e-149b-48ae-af50-44d1ee43aed6.png)
+![Screenshot 2024-04-09 071907](https://github.com/surajbhan93/easyalgo/assets/114743961/5eb1b4a7-d3ca-41be-8a03-2fefdd3438b1)
 
-![127 0 0 1_8000_projectsk](https://user-images.githubusercontent.com/106135144/218676780-62e72dd7-d2e4-4ef9-9b2b-aea25abf625d.png)
+![Screenshot 2024-04-09 071925](https://github.com/surajbhan93/easyalgo/assets/114743961/e0c435f3-6d67-44eb-9687-71f1352e07b5)
+
+![Screenshot 2024-04-09 071940](https://github.com/surajbhan93/easyalgo/assets/114743961/214c15de-210e-455d-85a4-ada0e96b3e66)
+
+![Screenshot 2024-04-09 071957](https://github.com/surajbhan93/easyalgo/assets/114743961/e2201f84-4a51-4be4-820d-a802f52f7a5f)
+
+![Screenshot 2024-04-09 072016](https://github.com/surajbhan93/easyalgo/assets/114743961/961713b1-0191-4f2e-9122-8bde2e7176c5)
+
+![Screenshot 2024-04-09 072032](https://github.com/surajbhan93/easyalgo/assets/114743961/a2de8933-02a6-4b0a-9729-bb70e9b6364e)
+
+![Screenshot 2024-04-09 072056](https://github.com/surajbhan93/easyalgo/assets/114743961/3f27724c-a2a3-47ba-8f5e-0b3bf873c802)
+
+![Screenshot 2024-04-09 072120](https://github.com/surajbhan93/easyalgo/assets/114743961/ac77c706-1ede-4d5a-82e8-03a21f42c0c4)
+
+![Screenshot 2024-04-09 072135](https://github.com/surajbhan93/easyalgo/assets/114743961/d37fbed7-c181-471c-9c55-3a6462e44a74)
 
 ## Admin Screenshots
 ![127 0 0 1_8000_admin_](https://user-images.githubusercontent.com/106135144/218730427-1aad64b4-65ff-44e4-babf-840d200919fa.png)
