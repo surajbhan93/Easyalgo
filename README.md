@@ -76,6 +76,10 @@ python manage.py runserver
 2. CSS
 3. JavaScript
 4. Python
+5. postgrelSql
+6. Django
+7. Jwt
+8. 
 
 ### Primary Modules used
 1. Django==4.1.4
@@ -83,11 +87,9 @@ python manage.py runserver
 3. whitenoise==6.3.0
 4. psycopg2==2.9.5
 5. django-tinymce==3.5.0
+6. Ckeditor
+7. and many more
 
-## Features
-1. Responsive design using Tailwind CSS
-2. Admin dashboard for managing blog posts and portfolio items
-3. Contact form for sending messages to the site owner
 
 ## Pages
 - `Home`: The landing page of the website, which displays a brief introduction and links to other pages.
@@ -99,6 +101,7 @@ python manage.py runserver
 - `Project`: A page that displays the details of a single portfolio project, including the title, description, date, and any relevant images or links.
 - `Categories`: A page that displays a list of blog post categories, with links to filtered lists of posts for each category.
 - `Custom 404 Pages`: Custom error pages that display when a user navigates to a non-existent page or encounters an error.
+- and many more ,check the website: [ https://easyalgo.org/ ]
 
 ## Website Screenshots
 
@@ -142,7 +145,7 @@ To deploy this project to a web server, you can follow these general steps:
 1. Set up a web server that can run Python applications. This could be a VPS, a PaaS like Heroku, or a cloud-based server like AWS.
 2. Clone the repository to your server:
 ```
-git clone https://github.com/ashish-makes/django-tailwind-blog.git
+[https://github.com/surajbhan93/easyalgo.git]
 ```
 3. Install the project dependencies on your server using `pip`:
 ```
