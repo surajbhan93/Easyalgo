@@ -124,14 +124,20 @@ python manage.py runserver
 ![Screenshot 2024-04-09 072135](https://github.com/surajbhan93/easyalgo/assets/114743961/d37fbed7-c181-471c-9c55-3a6462e44a74)
 
 ## Admin Screenshots
-![127 0 0 1_8000_admin_](https://user-images.githubusercontent.com/106135144/218730427-1aad64b4-65ff-44e4-babf-840d200919fa.png)
+![Screenshot 2024-04-10 194047](https://github.com/surajbhan93/easyalgo/assets/114743961/ade8a632-1fb7-4d98-ac06-c71ad1ae5629)
 
-![127 0 0 1_8000_admin_home_blog_](https://user-images.githubusercontent.com/106135144/218730473-d914186d-eabf-4ff9-bc45-dd98c024cfb5.png)
 
-![127 0 0 1_8000_admin_home_blog_7_change_](https://user-images.githubusercontent.com/106135144/218730503-f4027aeb-7579-4fc6-8fa4-5331201931e8.png)
 
-## Deployment
+## Deployment![Screenshot 2024-04-10 194056](https://github.com/surajbhan93/easyalgo/assets/114743961/8a42f94e-2d9a-4b94-b293-fffcbc08cc22)
+
+![Screenshot 2024-04-10 194122](https://github.com/surajbhan93/easyalgo/assets/114743961/4f0b1ee8-7404-4f97-b497-f82d4a57cd1c)
+
+
+
+![Screenshot 2024-04-10 194158](https://github.com/surajbhan93/easyalgo/assets/114743961/ee452849-8fbb-44e1-a524-d13f71a99d9a)
+
 To deploy this project to a web server, you can follow these general steps:
+
 
 1. Set up a web server that can run Python applications. This could be a VPS, a PaaS like Heroku, or a cloud-based server like AWS.
 2. Clone the repository to your server:
